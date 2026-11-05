@@ -1,0 +1,30 @@
+{
+  "name": "avaliacao-jogotrunoapi",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/mateusm1502/Avaliacao-jogoTrunoAPI#readme",
+  "bugs": {
+    "url": "https://github.com/mateusm1502/Avaliacao-jogoTrunoAPI/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mateusm1502/Avaliacao-jogoTrunoAPI.git"
+  },
+  "license": "ISC",
+  "author": "mateus moreira",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "expres": "^0.0.5",
+    "json": "^11.0.0",
+    "mysql2": "^3.24.6",
+    "sequelize": "^6.37.8",
+    "token": "^0.1.0",
+    "web": "^0.0.2"
+  }
+}
