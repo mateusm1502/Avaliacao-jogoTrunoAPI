@@ -1,0 +1,28 @@
+{
+  "name": "aula-exemplo-backend-tec-2026",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/renanponick/aula-exemplo-backend-tec-2026#readme",
+  "bugs": {
+    "url": "https://github.com/renanponick/aula-exemplo-backend-tec-2026/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renanponick/aula-exemplo-backend-tec-2026.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.24.5",
+    "sequelize": "^6.37.8"
+  }
+}
