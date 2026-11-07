@@ -1,11 +1,11 @@
 import express from 'express'
 import database from './config/database.js'
-import routerJogo from './router/jogo.js'
+import routerPartida from './router/partida.js'
 
 const app = express()
 app.use(express.json())
 
-app.use('/api/v1/jogo', routerJogo)
+app.use('/api/v1/partida', routerPartida)
 
 database.db.sync({ force: true })
     .then(() => {

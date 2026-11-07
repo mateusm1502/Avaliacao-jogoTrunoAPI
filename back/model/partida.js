@@ -1,8 +1,8 @@
 import database from "../config/database.js";
 
-class jogo {
+class partida {
     constructor() {
-        this.model = database.db.define("jogo", {
+        this.model = database.db.define("partida", {
             id: {
                 type: database.db.Sequelize.INTEGER,
                 primaryKey: true,
@@ -23,4 +23,4 @@ class jogo {
     }
 }
 
-export default new jogo().model
+export default new partida().model

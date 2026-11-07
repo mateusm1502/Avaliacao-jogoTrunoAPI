@@ -1,11 +1,11 @@
-import ServiceJogo from '../service/jogo.js'
+import ServicePartida from '../service/partida.js';
 
-class ControllerJogo {
+class ControllerPartida {
     // Recebimento e a Saida das info
     async Buscar(_, res) {
         try {
-            const jogo = await ServiceJogo.Buscar()
-            res.status(200).send({ mensagem: jogo })
+            const partida = await ServicePartida.Buscar()
+            res.status(200).send({ mensagem: partida })
         } catch (error) {
             res.status(500).send({
                 mensagem: error.message
@@ -17,9 +17,9 @@ class ControllerJogo {
         try {
             const id = req.params.id
 
-            const jogo = await ServiceJogo.Detalhe(id)
+            const partida = await ServicePartida.Detalhe(id)
 
-            res.status(200).send({ mensagem: jogo })
+            res.status(200).send({ mensagem: partida })
         } catch (error) {
             res.status(500).send({
                 mensagem: error.message
@@ -31,7 +31,7 @@ class ControllerJogo {
         try {
             const { descricao, data, vencedor } = req.body
 
-            await ServiceJogo.Criar(descricao, data, vencedor)
+            await ServicePartida.Criar(descricao, data, vencedor)
             
             res.status(201).send({ mensagem: "Cadastrado com sucesso" })
         } catch (error) {
@@ -46,7 +46,7 @@ class ControllerJogo {
             const { descricao, data, vencedor } = req.body
             const id = req.params.id
 
-            await ServiceJogo.Alterar(id, descricao, data, vencedor)
+            await ServicePartida.Alterar(id, descricao, data, vencedor)
             
             res.status(201).send({ mensagem: "Cadastrado com sucesso" })
         } catch (error) {
@@ -60,7 +60,7 @@ class ControllerJogo {
         try {
             const identificador = req.params.id
 
-            await ServiceJogo.Deletar(identificador)
+            await ServicePartida.Deletar(identificador)
 
             res.status(204).send({ mensagem: "Deletado" })
         } catch (error) {
@@ -71,4 +71,4 @@ class ControllerJogo {
     }
 }
 
-export default new ControllerJogo()
+export default new ControllerPartida()
